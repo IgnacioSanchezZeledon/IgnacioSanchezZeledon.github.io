@@ -1,3 +1,7 @@
+
+Index · HTML
+Copiar
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,11 +29,11 @@
     --display: 'Bricolage Grotesque', sans-serif;
     --body: 'Hanken Grotesk', sans-serif;
   }
-
+ 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
+ 
   html { scroll-behavior: smooth; }
-
+ 
   body {
     background: var(--bg);
     color: var(--text);
@@ -38,7 +42,7 @@
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
-
+ 
   /* ambient background: subtle grid + glow */
   body::before {
     content: "";
@@ -66,7 +70,7 @@
     pointer-events: none;
     filter: blur(20px);
   }
-
+ 
   .wrap {
     position: relative;
     z-index: 1;
@@ -74,7 +78,7 @@
     margin: 0 auto;
     padding: 0 28px;
   }
-
+ 
   /* nav */
   nav {
     position: sticky;
@@ -114,7 +118,7 @@
   }
   .nav-links a:hover { color: var(--accent); }
   .nav-links .num { color: var(--accent-deep); margin-right: 5px; font-weight: 500; }
-
+ 
   /* hero */
   header {
     padding: 120px 0 90px;
@@ -192,12 +196,12 @@
   }
   .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
   .btn svg { width: 16px; height: 16px; }
-
+ 
   @keyframes rise {
     from { opacity: 0; transform: translateY(22px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
+ 
   /* sections */
   section { padding: 64px 0; }
   .section-head {
@@ -224,7 +228,7 @@
     background: var(--border);
     align-self: center;
   }
-
+ 
   /* about */
   .about-text {
     font-size: 1.12rem;
@@ -234,7 +238,7 @@
   .about-text p { margin-bottom: 18px; }
   .about-text b { color: var(--text); font-weight: 600; }
   .about-text .hl { color: var(--accent); font-weight: 500; }
-
+ 
   /* experience */
   .exp-item {
     display: grid;
@@ -260,7 +264,7 @@
   }
   .exp-company { color: var(--accent); font-size: 0.95rem; margin-bottom: 14px; font-weight: 500; }
   .exp-desc { color: var(--text-dim); font-size: 0.98rem; max-width: 560px; }
-
+ 
   /* projects */
   .projects { display: flex; flex-direction: column; gap: 18px; }
   .project {
@@ -336,7 +340,7 @@
     border-radius: 6px;
     letter-spacing: 0.01em;
   }
-
+ 
   /* skills */
   .skills-grid {
     display: grid;
@@ -366,7 +370,7 @@
   }
   .skill-list span::after { content: "·"; color: var(--text-faint); margin-left: 8px; }
   .skill-list span:last-child::after { content: ""; }
-
+ 
   /* contact */
   .contact {
     text-align: center;
@@ -392,7 +396,7 @@
     margin: 0 auto 36px;
     font-size: 1.05rem;
   }
-
+ 
   /* footer */
   footer {
     border-top: 1px solid var(--border);
@@ -418,11 +422,11 @@
   }
   .socials a:hover { color: var(--accent); transform: translateY(-2px); }
   .socials svg { width: 19px; height: 19px; }
-
+ 
   /* reveal on scroll */
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .reveal.in { opacity: 1; transform: translateY(0); }
-
+ 
   @media (max-width: 640px) {
     .nav-links { display: none; }
     .exp-item { grid-template-columns: 1fr; gap: 8px; }
@@ -432,21 +436,22 @@
 </style>
 </head>
 <body>
-
+ 
 <nav id="nav">
   <div class="nav-inner">
     <a href="#top" class="nav-logo">ISZ<span>.</span></a>
     <div class="nav-links">
       <a href="#about"><span class="num">01</span>About</a>
       <a href="#experience"><span class="num">02</span>Experience</a>
-      <a href="#projects"><span class="num">03</span>Projects</a>
-      <a href="#contact"><span class="num">04</span>Contact</a>
+      <a href="#education"><span class="num">03</span>Education</a>
+      <a href="#projects"><span class="num">04</span>Projects</a>
+      <a href="#contact"><span class="num">05</span>Contact</a>
     </div>
   </div>
 </nav>
-
+ 
 <div class="wrap" id="top">
-
+ 
   <header>
     <div class="eyebrow">Data Engineer · Costa Rica</div>
     <h1>Ignacio Sánchez<br><span class="dim">Zeledón</span></h1>
@@ -462,7 +467,7 @@
       </a>
     </div>
   </header>
-
+ 
   <section id="about" class="reveal">
     <div class="section-head">
       <span class="idx">01</span>
@@ -475,14 +480,14 @@
       <p>CS graduate from <b>UCR</b>. Always happy to connect.</p>
     </div>
   </section>
-
+ 
   <section id="experience" class="reveal">
     <div class="section-head">
       <span class="idx">02</span>
       <h2>Experience</h2>
       <span class="line"></span>
     </div>
-
+ 
     <div class="exp-item">
       <div class="exp-period">Jan 2025 — Present</div>
       <div>
@@ -491,7 +496,7 @@
         <div class="exp-desc">Resolve 50–60 weekly data incidents using SQL and database analysis, run bulk updates across regional datasets, and build Python scripts for transformations and batch corrections in production systems.</div>
       </div>
     </div>
-
+ 
     <div class="exp-item">
       <div class="exp-period">Jul 2024 — Jan 2025</div>
       <div>
@@ -500,7 +505,15 @@
         <div class="exp-desc">Built React web applications for patients, doctors, and warranty management, integrated with backend services via REST APIs, with validation and data-integrity checks at the UI level.</div>
       </div>
     </div>
-
+  </section>
+ 
+  <section id="education" class="reveal">
+    <div class="section-head">
+      <span class="idx">03</span>
+      <h2>Education</h2>
+      <span class="line"></span>
+    </div>
+ 
     <div class="exp-item">
       <div class="exp-period">2021 — 2025</div>
       <div>
@@ -510,16 +523,16 @@
       </div>
     </div>
   </section>
-
+ 
   <section id="projects" class="reveal">
     <div class="section-head">
-      <span class="idx">03</span>
+      <span class="idx">04</span>
       <h2>Projects</h2>
       <span class="line"></span>
     </div>
-
+ 
     <div class="projects">
-
+ 
       <a class="project" href="https://github.com/IgnacioSanchezZeledon/Flight-Tracking-Data-Pipeline-on-GCP" target="_blank" rel="noopener">
         <div class="project-top">
           <div class="project-name">Flight Tracking Data Pipeline</div>
@@ -533,7 +546,7 @@
           <span class="tag">Airflow</span>
         </div>
       </a>
-
+ 
       <a class="project" href="https://github.com/IgnacioSanchezZeledon/sentinel-fraud-pipeline" target="_blank" rel="noopener">
         <div class="project-top">
           <div class="project-name">
@@ -549,7 +562,7 @@
           <span class="tag">Make</span>
         </div>
       </a>
-
+ 
       <div class="project" style="cursor: default;">
         <div class="project-top">
           <div class="project-name">Graduate Dropout Prediction</div>
@@ -562,13 +575,13 @@
           <span class="tag">SHAP</span>
         </div>
       </div>
-
+ 
     </div>
   </section>
-
+ 
   <section id="skills" class="reveal">
     <div class="section-head">
-      <span class="idx">04</span>
+      <span class="idx">05</span>
       <h2>Skills</h2>
       <span class="line"></span>
     </div>
@@ -587,16 +600,16 @@
       </div>
     </div>
   </section>
-
+ 
   <section id="contact" class="contact reveal">
-    <div class="idx">05 — What's next</div>
+    <div class="idx">06 — What's next</div>
     <h2>Let's connect</h2>
     <p>Open to data engineering opportunities and always happy to chat about data, pipelines, or building things.</p>
     <a class="btn btn-primary" href="mailto:isanchezzeledon@hotmail.com">Say hello</a>
   </section>
-
+ 
 </div>
-
+ 
 <footer>
   <div class="wrap footer-inner">
     <span>© <span id="year"></span> Ignacio Sánchez Zeledón</span>
@@ -613,20 +626,20 @@
     </div>
   </div>
 </footer>
-
+ 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
-
+ 
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 20);
   });
-
+ 
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
-
+ 
 </body>
 </html>
